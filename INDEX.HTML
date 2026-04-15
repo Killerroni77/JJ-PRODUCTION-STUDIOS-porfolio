@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;background:#f9f9f9;color:#1a1a1a}
+header{padding:80px 20px;text-align:center;background:#fff}
+h1{font-size:2.8rem;margin-bottom:10px}
+p{color:#555}
+.btn{display:inline-block;margin-top:20px;padding:12px 28px;background:#111;color:#fff;text-decoration:none;border-radius:6px}
+.section{padding:70px 20px;text-align:center}
+
+/* NAV */
+nav{position:sticky;top:0;background:#fff;padding:10px;text-align:center;box-shadow:0 2px 5px rgba(0,0,0,0.05);z-index:1000}
+nav a{margin:0 15px;text-decoration:none;color:#111;font-weight:500}
+
+/* BEFORE AFTER SLIDER */
+.slider{position:relative;width:300px;margin:20px auto}
+.slider img{width:100%;border-radius:10px}
+.slider .after{position:absolute;top:0;left:0;width:50%;overflow:hidden}
+.slider input{width:100%}
+
+/* VIDEO */
+.video{max-width:300px;margin:20px auto}
+video{width:100%;border-radius:10px}
+
+/* SERVICES */
+.services{display:flex;flex-wrap:wrap;justify-content:center}
+.service-box{background:#fff;padding:25px;margin:15px;border-radius:10px;width:250px;box-shadow:0 4px 10px rgba(0,0,0,0.05)}
+
+/* STATS */
+.stats{display:flex;justify-content:center;flex-wrap:wrap}
+.stat{margin:20px;font-size:1.2rem}
+.stat b{font-size:1.8rem;display:block}
+
+/* TESTIMONIAL */
+.testimonial{background:#fff;padding:20px;margin:15px;border-radius:10px;max-width:600px;margin-left:auto;margin-right:auto;box-shadow:0 4px 10px rgba(0,0,0,0.05)}
+
+/* STICKY BUTTON */
+.sticky-btn{position:fixed;bottom:20px;right:20px;background:#111;color:#fff;padding:15px 20px;border-radius:50px;text-decoration:none}
+
+footer{text-align:center;padding:30px;background:#111;color:#fff}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#portfolio">Work</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<header>
+<h1>JJ'S PRODUCTION STUDIO</h1>
+<p>Amazon Product Images & High-Converting UGC Videos</p>
+<a href="#portfolio" class="btn">View My Work</a>
+</header>
+
+<section id="portfolio" class="section">
+<h2>Before vs After</h2>
+<div class="slider">
+<img src="before.jpg">
+<div class="after"><img src="after.jpg"></div>
+<input type="range" min="0" max="100" value="50" oninput="slide(this.value)">
+</div>
+</section>
+
+<section class="section">
+<h2>UGC Video Example</h2>
+<div class="video">
+<video controls autoplay muted loop>
+<source src="video.mp4" type="video/mp4">
+</video>
+</div>
+</section>
+
+<section id="services" class="section">
+<h2>Services</h2>
+<div class="services">
+<div class="service-box">Amazon Listing Images</div>
+<div class="service-box">A+ Content Design</div>
+<div class="service-box">UGC Video Creation</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Results</h2>
+<div class="stats">
+<div class="stat"><b>+120%</b> CTR Boost</div>
+<div class="stat"><b>+80%</b> Conversion</div>
+<div class="stat"><b>50+</b> Projects Done</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Testimonials</h2>
+<div class="testimonial">"My sales increased instantly after using his creatives!"</div>
+<div class="testimonial">"Best Amazon designer I worked with."</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Hire Me</h2>
+<p>Email: your@email.com</p>
+<a href="#" class="btn">Contact Now</a>
+</section>
+
+<a href="#contact" class="sticky-btn">Hire Me</a>
+
+<footer>
+<p>© 2026 Your Name</p>
+</footer>
+
+<script>
+function slide(val){document.querySelector('.after').style.width=val+'%';}
+</script>
+
+</body>
+</html>
